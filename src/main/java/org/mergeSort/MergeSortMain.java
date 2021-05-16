@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class MergeSortMain {
 
-
+// time complexcity O(n log n)
     public static void mergingTwoArray(int arr[],int l_index,int mid_index,int r_index){
         int arr1[]=new int[20];
         int i=l_index;
