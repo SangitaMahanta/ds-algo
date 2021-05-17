@@ -1,7 +1,8 @@
 package org.quickSort;
 
 import java.util.Arrays;
-
+//Best case O(n log n)
+//worst case O(n2)
 public class QuickSortMain {
     public static void swap(int arr[],int i,int j){
         int temp=arr[i];
