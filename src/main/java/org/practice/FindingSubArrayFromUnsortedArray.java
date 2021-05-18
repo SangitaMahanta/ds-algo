@@ -23,14 +23,29 @@ int i=0;
                     break;
                 }
             }
-            for (int j=arr.length-1;j>i;j--){
-                if(arr[j]>arr[j-1]){
+//            for (int j=arr.length-1;j>i;j--){
+//                if(arr[j]>arr[j-1]){
+//                    j--;
+//                }
+//                else {
+//                    last_index=++j+1;
+//                    break;
+//                }
+        int j=0;
+        i=arr.length-1;
+        j=i-1;
+        while(i>j){
+//            int arr[]={10, 12, 20, 30, 25, 40, 32, 31, 35, 50, 60};
+
+            if(arr[i]>arr[j]){
+                    i--;
                     j--;
                 }
                 else {
-                    last_index=++j+1;
+                    last_index=i+1;
                     break;
                 }
+
             }
 
 //        System.out.println("start index is "+start_index);
