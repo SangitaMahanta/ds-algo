@@ -7,7 +7,7 @@ public class MergeSortMain {
 
 // time complexcity O(n log n)
     public static void mergingTwoArray(int arr[],int l_index,int mid_index,int r_index){
-        int arr1[]=new int[20];
+        int arr1[]=new int[arr.length];
         int i=l_index;
         int j=mid_index+1;
         int k=l_index;
@@ -46,10 +46,14 @@ for (k=l_index;k<=r_index;k++){
     }
 
 
-    public static void mergeSort(int arr[],int l_index,int r_index){
+    public static void mergeSort(int arr[],int l_index,int r_index) {
         if (l_index < r_index) {
+//            {9,4,7,6,3,1,5}
+//            mid =6 {9,4,7 6}
+//            9 4  7 6
+//l 9 r 4           l =7 r 6
             int mid_index=(l_index+r_index)/2;
-            mergeSort(arr,l_index,mid_index);
+            mergeSort(arr,l_index,mid_index);//0 3 //0 1
             mergeSort(arr,mid_index+1,r_index);
             mergingTwoArray(arr,l_index,mid_index,r_index);
         }
@@ -64,4 +68,6 @@ for (k=l_index;k<=r_index;k++){
         mergeSort(arr,l_index,r_index);
         System.out.println("After sorting array is : "+ Arrays.toString(arr));
     }
-}
+
+    }
+
