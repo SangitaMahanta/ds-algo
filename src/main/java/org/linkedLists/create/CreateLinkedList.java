@@ -1,7 +1,7 @@
 package org.linkedLists.create;
 
 public class CreateLinkedList {
-Node head;
+static Node head;
     static class Node{
         int data;
         Node next;

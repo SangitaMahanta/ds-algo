@@ -3,7 +3,7 @@ package org.linkedLists.create;
 // Java program to illustrate merge sorted
 // of linkedList
 public class MergeSortOfLinkedList {
-        node head = null;
+      static   node head = null;
         // node a, b;
         static class node {
             int val;
