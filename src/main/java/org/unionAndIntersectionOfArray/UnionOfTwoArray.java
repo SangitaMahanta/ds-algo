@@ -61,28 +61,45 @@ public class UnionOfTwoArray {
 
     public static void main(String[] args) {
         int arr[] = {11, 2, 8, 75, 23, 12, 99, 33, 88};
-        int arr1[] = {11, 2, 8, 5, 91, 33, 88};
+        int arr1[] = {11, 2, 8, 5, 91, 33, 88,44,88};
 LinkedList<Integer> lst = new LinkedList<Integer>();
-
+int count=0;
         if (arr.length > arr1.length) {
             Arrays.sort(arr1);
             for (int i = 0; i < arr1.length ; i++) {
+                count++;
+                lst.add(arr1[i]);
+            }
+        }
+        else if (arr.length < arr1.length) {
+            Arrays.sort(arr);
+            for (int i = 0; i < arr.length ; i++) {
+                count++;
+                lst.add(arr1[i]);
+            }
+        }
+        else  {
+            Arrays.sort(arr1);
+            for (int i = 0; i < arr1.length ; i++) {
+                count++;
                 lst.add(arr1[i]);
             }
         }
         Arrays.sort(arr);
         for (int j = 0; j < arr.length - 1; j++) {
-            if (!binSearch1(arr1, arr[j])) {
+            if (!binSearch1(arr, arr1[j])) {
                 lst.add(arr[j]);
             }
         }
 
 
-        Iterator itr = lst.iterator();
-        while (itr.hasNext()){
-            System.out.print(itr.next()+" ");
-        }
+//        Iterator itr = lst.iterator();
+//        while (itr.hasNext()){
+//            System.out.print(itr.next()+" ");
+//        }
 
+        System.out.println(lst);
+        System.out.println("No of counts : "+count);
     }
     private static boolean binSearch1(int arr[], int n) {
         int start = 0;
