@@ -7,12 +7,13 @@ package org.array;
 import java.util.Arrays;
 
 public class CyclicRotationOfArr {
-    public static void m1(String[] args) {
+    public static void main1(String[] args) {
         int arr[] = {1,2,3,4,5,86};
+//        int arr[] = {1,2,3};
 
         int temp = arr[arr.length-1];
         for (int i = arr.length-1; i>0 ; i--){
-            arr[i-1] = arr[i-1];
+            arr[i] = arr[i-1];
         }
         arr[0] = temp;
         System.out.println(Arrays.toString(arr));
