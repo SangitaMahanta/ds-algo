@@ -1,8 +1,6 @@
 package org.unionAndIntersectionOfArray;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 //Procedure :
 // step-1   : compare the length of an two arr
@@ -20,7 +18,7 @@ public class UnionOfTwoArray {
         int arr3[] = new int[arr.length + arr1.length];
         if (arr.length > arr1.length) {
             Arrays.sort(arr1);
-            for (int i = 0; i < arr1.length ; i++) {
+            for (int i = 0; i < arr1.length; i++) {
                 arr3[i] = arr1[i];
             }
         }
@@ -60,32 +58,32 @@ public class UnionOfTwoArray {
 //  Dynamic memory allocation using linkedList
 
     public static void main(String[] args) {
-        int arr[] = {11, 2, 8, 75, 23, 12, 99, 33, 88};
-        int arr1[] = {11, 2, 8, 5, 91, 33, 88,44,88};
-LinkedList<Integer> lst = new LinkedList<Integer>();
-int count=0;
+        int arr[] = {11, 2, 8, 8, 8, 12, 99, 33, 88};
+        int arr1[] = {11, 2, 33, 33, 33, 33, 88, 44, 88};
+       Set<Integer> lst = new TreeSet<>();
+        int count = 0;
         if (arr.length > arr1.length) {
             Arrays.sort(arr1);
-            for (int i = 0; i < arr1.length ; i++) {
+            for (int i = 0; i < arr1.length; i++) {
                 count++;
                 lst.add(arr1[i]);
             }
-        }
-        else if (arr.length < arr1.length) {
+        } else if (arr.length < arr1.length) {
             Arrays.sort(arr);
-            for (int i = 0; i < arr.length ; i++) {
+            for (int i = 0; i < arr.length; i++) {
                 count++;
-                lst.add(arr1[i]);
+                lst.add(arr[i]);
             }
-        }
-        else  {
+        } else {
+            if (arr.length==arr1.length){
             Arrays.sort(arr1);
-            for (int i = 0; i < arr1.length ; i++) {
+            for (int i = 0; i < arr1.length; i++) {
                 count++;
                 lst.add(arr1[i]);
             }
         }
-        Arrays.sort(arr);
+        }
+
         for (int j = 0; j < arr.length - 1; j++) {
             if (!binSearch1(arr, arr1[j])) {
                 lst.add(arr[j]);
@@ -99,8 +97,9 @@ int count=0;
 //        }
 
         System.out.println(lst);
-        System.out.println("No of counts : "+count);
+        System.out.println("No of counts : " + count);
     }
+
     private static boolean binSearch1(int arr[], int n) {
         int start = 0;
         int end = arr.length - 1;
