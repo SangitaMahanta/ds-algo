@@ -7,8 +7,10 @@ import java.util.Arrays;
 //merge two sorted array without using extra space
 public class MergeTwoSortedArray {
     public static void main(String[] args) {
-        int arr1[] = {1 , 2, 5, 9, 12};
-        int arr2[] = {3 , 4, 10, 11};
+//        int arr1[] = {1 , 3, 5, 9, 12};
+        int arr1[] = {1 , 3, 5, 7};
+        int arr2[] = {0 , 2, 6, 9, 8};
+//        int arr2[] = {2 , 4, 10, 11};
 
         mergeSort(arr1,arr2);
         System.out.println(Arrays.toString(arr1)+" "+Arrays.toString(arr2));
