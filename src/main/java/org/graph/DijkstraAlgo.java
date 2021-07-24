@@ -25,7 +25,7 @@ public class DijkstraAlgo {
             int v2 = sc.nextInt();
             int weight = sc.nextInt();
             adjacencyMatrix[v1][v2] = weight;
-            adjacencyMatrix[v2][v1] = weight;
+//            adjacencyMatrix[v2][v1] = weight;
 
         }
         dijkstra(adjacencyMatrix);

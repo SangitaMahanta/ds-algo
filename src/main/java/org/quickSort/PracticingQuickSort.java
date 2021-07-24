@@ -1,6 +1,6 @@
 package org.quickSort;
 import java.util.Arrays;
-// 1 . Choose any one element as pivot element (choose it inisde a method that will
+// 1 . Choose any one element as pivot element (choose it inside a method that will
 //  work recursively here quick_sort())
 // 2. The element may be start index, last index, or any index
 // 3. If there is at least one element btn first and last i.e first < last is true

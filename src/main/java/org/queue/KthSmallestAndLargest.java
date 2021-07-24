@@ -26,8 +26,8 @@ public class KthSmallestAndLargest {
         }
         System.out.println("kth sorted array ");
         System.out.println(Arrays.toString(arr));
-//        System.out.println("kth smallest element "+arr[k-1]);
-//        System.out.println("kth largest element "+arr[arr.length-k-1]);
+        System.out.println("kth smallest element "+arr[k-1]);
+        System.out.println("kth largest element "+arr[arr.length-1-(k-1)]);
 
     }
 }

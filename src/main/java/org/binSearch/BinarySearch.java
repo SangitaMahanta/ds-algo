@@ -1,5 +1,6 @@
 package org.binSearch;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BinarySearch {
@@ -10,7 +11,6 @@ public class BinarySearch {
         int right=arr.length-1;
         int arr_length=arr.length;
 //        int mid;
-
 
         for (int i=0;i<arr_length;i++)
         {
@@ -29,9 +29,11 @@ public class BinarySearch {
             }
             else if(searchItem<arr[mid]){
                 right=mid;
+//                right=mid-1;
             }
             else if(searchItem>arr[mid]){
                 left=mid;
+//                left=mid+1;
             }
 
             }
@@ -40,8 +42,9 @@ public class BinarySearch {
     }
     public static void main(String[] args) {
         int arr[]={12,24,35,55,67,76,89,99};
+        System.out.println(Arrays.toString(arr));
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the search item :");
+        System.out.println("Enter the search item from the above array:");
         int s_element=sc.nextInt();
 
         int result=binarySearch(arr,s_element);
